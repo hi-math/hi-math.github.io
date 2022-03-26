@@ -19,8 +19,8 @@ locale                   : "ko-KR"
 published                : true
 title                    : "인간인데 기계처럼 생각하기"
 title_separator          : "|"
-subtitle                 : "slow"
-name                     : "Ahnys"
+subtitle                 : "himath"
+name                     : "아뇽서기"
 description              : "안힘든척"
 url                      : "https://hi-math.github.io.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -30,7 +30,7 @@ logo                     : "/assets/images/title.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 future                   : true
 
-# breadcrumbs            : false # true, false (default)
+breadcrumbs            : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
