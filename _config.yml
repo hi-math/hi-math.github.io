@@ -15,13 +15,13 @@
 minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "ko-KR"
 published                : true
-title                    : "Ready to go?"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+title                    : "인간인데 기계처럼 생각하기"
+title_separator          : "|"
+subtitle                 : "slow"
 name                     : "Ahnys"
-description              : "slow and steady."
+description              : "안힘든척"
 url                      : "https://hi-math.github.io.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "hi-math/hi-math.github.io"
