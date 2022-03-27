@@ -41,7 +41,7 @@ plt.show()
 
 
     
-![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian_mm/output_2_0.png)
+![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian%20mm.md/output_2_0.png)
     
 
 
@@ -85,7 +85,7 @@ plt.show()
 
 
     
-![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian_mm/output_7_0.png)
+![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian%20mm.md/output_7_0.png)
     
 
 
@@ -119,7 +119,7 @@ plt.show()
 
 
     
-![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian_mm/output_11_0.png)
+![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian%20mm.md/output_11_0.png)
     
 
 
