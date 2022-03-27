@@ -214,6 +214,7 @@ phi=[0.5,0.5]
 ```
 
 
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -265,9 +266,9 @@ for aa in range(epoch):
   mu=[data1.mean(),data2.mean()]
   std=[data1.std(),data2.std()]
   phi=[len(data1)/(len(data1)+len(data2)),len(data2)/(len(data1)+len(data2)) ]
+```
 
- 
-##결과입니다.
+## 결과적으로..
 
 <img src = "https://drive.google.com/uc?id=1Xk4LK5TpC1mGt_G1iEnIehUrX1HWFOz-" height = 300 width = 480>
 
