@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "가우시안 혼합 모형(Gaussian Mixture Model) a.k.a GMM"
+tags:
+  - GMM
+  - EM
+use_math: true
+---
+
 #가우시안 혼합 모형(Gaussian Mixture Model) a.k.a GMM
 
 ## 사건의 시작
