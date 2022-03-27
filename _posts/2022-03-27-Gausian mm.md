@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  "가우시안 혼합 모형(Gaussian Mixture Model) a.k.a GMM"
 tags:
   - GMM
