@@ -32,7 +32,7 @@ plt.show()
 
 
     
-![png](output_2_0.png)
+![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian_mm/output_2_0.png)
     
 
 
@@ -76,7 +76,7 @@ plt.show()
 
 
     
-![png](output_7_0.png)
+![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian_mm/output_7_0.png)
     
 
 
@@ -110,7 +110,7 @@ plt.show()
 
 
     
-![png](output_11_0.png)
+![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian_mm/output_11_0.png)
     
 
 
@@ -267,72 +267,8 @@ for aa in range(epoch):
   phi=[len(data1)/(len(data1)+len(data2)),len(data2)/(len(data1)+len(data2)) ]
 
  
-
-```
-
-
-    
-![png](output_20_0.png)
-    
-
-
-
-    
-![png](output_20_1.png)
-    
-
-
-
-    
-![png](output_20_2.png)
-    
-
-
-
-    
-![png](output_20_3.png)
-    
-
-
-
-    
-![png](output_20_4.png)
-    
-
-
-
-    
-![png](output_20_5.png)
-    
-
-
-
-    
-![png](output_20_6.png)
-    
-
-
-
-    
-![png](output_20_7.png)
-    
-
-
-
-    
-![png](output_20_8.png)
-    
-
-
-
-    
-![png](output_20_9.png)
-    
-
-
 ##결과입니다.
 
-%%html
 <img src = "https://drive.google.com/uc?id=1Xk4LK5TpC1mGt_G1iEnIehUrX1HWFOz-" height = 300 width = 480>
 
 구분이 잘 되는 집단이라 그런지 3회정도 반복하니까 거의 정확하게 맞았습니다.
