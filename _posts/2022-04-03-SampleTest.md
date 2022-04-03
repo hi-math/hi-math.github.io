@@ -2,7 +2,7 @@
 title:  "연습삼아 해봅시다."
 tags:
   - GMM
-  - EM
+  - scikit-learn
 use_math: true
 comments: true
 ---
@@ -43,5 +43,10 @@ plt.scatter(X[:, 0],X[:, 1],c='g', marker='o',  s=20)
 
 plt.show()
 ```
+![생성된 데이터](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-04-03-SampleTest.md/cluster.png)
 
-# 
+이 데이터를 분류해봅시다. 누가봐도 세개의 그룹으로 이루어져있군요. 컴포넌트를 3으로 지정하고 결과값을  gmm_labels에 저장합니다.
+각각 색깔을 주어 분류결과를 봅시다.
+
+![생성된 데이터](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-04-03-SampleTest.md/classify.png)
+
