@@ -163,8 +163,11 @@ z는 GMM의 결과 분류된 예측번호입니다. 즉 분류값이라고 할 �
 300개의 데이터에서 13개를 잘못 분류했습니다. 하지만 이건 잘못분류했다고 하긴 좀 힘들겁니다. 왜냐면 인간도 분류하기 힘든 영역이니까요
 
 값만보면 충분히 잘못분류할 수 있을 것입니다. 아마 인간도 맥락없이 보기만 했다면 제대로 분류하기 힘들겁니다. 
-갑자기 머리 긴 사람을 보고 여자인줄알고 따라다니는 광고가 생각나네요.
+갑자기 스키장에서 핑크색 옷을 입고 머리가 긴 사람을 보고 여자인줄알고 홀린듯 따라다니는 광고가 생각나네요.
+핑크색 옷에 머리까지 길었으니 아마도 여자라는 모델의 우도가 매우 크다고 판단했겠지만.. 잘못된 모델이었군요.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/krOMSqcJBrI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 
 이 광고가 벌써 13년 전이네요..
