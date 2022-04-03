@@ -96,7 +96,7 @@ plt.show()
 
 만약 라벨링이 되어있지 않다면, 주어진 분포에 맞게 우도를 구하여 각 자료가 어떤 분포에 속할 확률을 구할 수 있습니다. 아래그림처럼 말이죠.
 
-![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian%20mm.md/likelihood.png)
+![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian%20mm.md/likelihood.jpg)
 
 
 256이라는 발 사이즈는 남자일까요? 여자일까요? 파란색 분포는 여자의 발 사이즈를 알려주는 분포입니다. 주황색은 남자의 발 사이즈이죠. 즉 likilihood를 계산하면 256이라는 사이즈는 여자의 발 크기였을 확률이 더 높습니다.
@@ -128,7 +128,7 @@ plt.show()
 
 
 # 내이름은 탐정, 코난이죠!
-![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian%20mm.md/conan.png)
+![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian%20mm.md/conan.jpg)
 
 
 우리의 목적은 이처럼 자료의 분포도 알 수 없고 라벨링도 되어있지 않은 데이터를 이용해 원래 분포를 예측하고 이를 바탕으로 각 데이터를 클러스터링(clustering)하는 것입니다. 이때 데이터들은 정규분포를 이루고 있다고 가정합니다. 즉 정규분포를 이루고 있는 n개의 집단이 섞여있고 이것들을 분류하는데 있어 GMM은 좋은 성능을 발휘할 수 있습니다. 그러면 이제부터 GMM을 이해하는데 필요한 수학적인 배경에 대해 알아봅시다.
