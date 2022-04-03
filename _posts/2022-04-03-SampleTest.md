@@ -18,3 +18,30 @@ scikit-learn은 머신러닝을 학습할때 빠지지 않는 라이브러리입
 각종 도구들과 데이터를 가지고 있으니 아직 실전에 뛰어들기전 끝없는 수련이 필요한 저에게 가장 필요한 사이트일 것입니다.
 
 분류를 위해 먼저 2차원 데이터를 만들어보겠습니다.
+
+```python
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_blobs
+from sklearn.mixture import GaussianMixture
+import numpy as np
+import pandas as pd
+%matplotlib inline
+
+
+n = 200
+xmin, xmax, ymin, ymax= 0, 20, 0, 20
+X, y = make_blobs(
+    n_samples=n,
+    n_features=2,
+    centers=3,
+    cluster_std=0.5,
+    shuffle=True,
+    random_state=0
+)
+
+plt.scatter(X[:, 0],X[:, 1],c='g', marker='o',  s=20)
+
+plt.show()
+```
+
+# 
