@@ -55,7 +55,7 @@ df = pd.DataFrame({"target":y, "pred":z})
 print(df.groupby('target')['pred'].value_counts())
 ```
 
-![결과](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-04-03-SampleTest.md/result.png)
+![결과](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-04-03-SampleTest.md/result.PNG)
 
 이름은 다르지만 아주 정확하게 분류된 것을 확인했습니다. 2차원에서 잘 작동하는 것을 보았으니 이제 3차원에서 시도해보겠습니다.
 
@@ -103,7 +103,7 @@ df = pd.DataFrame({"target":y, "pred":z})
 print(df.groupby('target')['pred'].value_counts())
 ```
 
-![결과](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-04-03-SampleTest.md/result2.png)
+![결과](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-04-03-SampleTest.md/result2.PNG)
 
 각각 100개로 잘 분류했습니다. 비지도학습이다보니 타겟의 이름을 맞추지는 못하는군요.
 
