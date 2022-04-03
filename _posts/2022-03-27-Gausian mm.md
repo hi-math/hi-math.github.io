@@ -50,17 +50,18 @@ plt.show()
 하위집단이 정규분포를 따른다고 가정합시다. 그러면 각각의 하위집단은 평균과 표준편차를 파라미터로 가집니다. 그리고 남자 300명, 여자 200명 처럼 전체에서 그 집단이 차지하는 비율이 있습니다. 이렇게 각각의 하위집단은 평균, 표준편차, 비율이라는 세개의 파라미터를 가집니다. 각각을 𝜇, 𝜎, 𝜋 라고 둡시다. 
 위의 예처럼 두 개의 하위집단인 경우, 두 집단의 파라미터는 각각 
 
-$( 𝜇_1, 𝜎_1, 𝜋 _1)= (270, 14, \frac{3}{5} )$
+$1+1$
+$ ( 𝜇_1, 𝜎_1, 𝜋 _1)= (270, 14, \frac{3}{5} )$
 
 
-$(𝜇_2, 𝜎_2, 𝜋 _2)= (240, 12, \frac{2}{5} )$
+$ (𝜇_2, 𝜎_2, 𝜋 _2)= (240, 12, \frac{2}{5} )$
 입니다.
 
 
 이를 바탕으로 확률변수 X의 확률밀도함수를 만들면 다음과 같습니다.
 
 
-$f(x)=\sum_c \pi_c N(x|\mu_c,\sigma_c)$
+$ f(x)=\sum_c \pi_c N(x|\mu_c,\sigma_c) $
 
 위 식에서 c는 집단의 인덱스를 의미하며 처음에 들었던 예에서는 남자와 여자 두개의 집단이 있으므로 1,2로 쓸 수 있습니다.
 
@@ -96,7 +97,7 @@ plt.show()
 
 만약 라벨링이 되어있지 않다면, 주어진 분포에 맞게 우도를 구하여 각 자료가 어떤 분포에 속할 확률을 구할 수 있습니다. 아래그림처럼 말이죠.
 
-<img src = "https://drive.google.com/uc?id=1hPDG-WnJAwpADQNfOsBhNbpEdgmcYXPd" height = 300 width = 400>
+![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian%20mm.md/likelihood.png)
 
 
 256이라는 발 사이즈는 남자일까요? 여자일까요? 파란색 분포는 여자의 발 사이즈를 알려주는 분포입니다. 주황색은 남자의 발 사이즈이죠. 즉 likilihood를 계산하면 256이라는 사이즈는 여자의 발 크기였을 확률이 더 높습니다.
@@ -128,12 +129,13 @@ plt.show()
 
 
 # 내이름은 탐정, 코난이죠!
-<img src = "https://drive.google.com/uc?id=1CGWi_xI8IzqNxXCg3dQAPq-3XfriY2hV" height = 300 width = 300>
+![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian%20mm.md/conan.png)
+
 
 우리의 목적은 이처럼 자료의 분포도 알 수 없고 라벨링도 되어있지 않은 데이터를 이용해 원래 분포를 예측하고 이를 바탕으로 각 데이터를 클러스터링(clustering)하는 것입니다. 이때 데이터들은 정규분포를 이루고 있다고 가정합니다. 즉 정규분포를 이루고 있는 n개의 집단이 섞여있고 이것들을 분류하는데 있어 GMM은 좋은 성능을 발휘할 수 있습니다. 그러면 이제부터 GMM을 이해하는데 필요한 수학적인 배경에 대해 알아봅시다.
                                                   
 
-##닭이 먼저? 달걀이 먼저?
+## 닭이 먼저? 달걀이 먼저?
 라벨링이 되어있으면 분포를 구할 수 있습니다. 분포를 알면 라벨링을 할 수 있죠. 그런데 라벨링도 되어있지 않고 분포도 알 수 없으면 어떻게 해야 할까요?
 
 그래서 임의의 분포를 먼저 가정하고 이 분포를 바탕으로 라벨링을 한 후 다시 라벨링을 바탕으로 분포를 구합니다. 이 방법을 EM알고리즘이라고 합니다. (사실 정확한 EM알고리즘과는 다릅니다. 아직 각 분포의 비율은 다루지 않았으니까요.)
@@ -150,7 +152,7 @@ plt.show()
 
 epoch를 10으로 주었는데 쉬운과제이다보니 3이후에는 변화가 없는 것을 관찰할 수 있습니다.
 
-<img src = "https://drive.google.com/uc?id=1diKwPIdp6AHzRDKJOkSFzgNUeAO2phkH" height = 300 width = 500>
+![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian%20mm.md/gif.gif)
 
 
 
@@ -164,7 +166,7 @@ epoch를 10으로 주었는데 쉬운과제이다보니 3이후에는 변화가 
 <b>E-step</b>
 
 일단은 random intialization으로 시작합니다. expaction-step에서는 
-$\omega^{(i)}_j = p(z^{(i)} = j | x^{(i)};𝜙,𝜇,𝛴)$ 라는 식으로 쓰여지고 파라미터로 𝜙,𝜇,𝛴 를 사용하게 됩니다.
+$\omega^{(i)}_j = p(z^{(i)} = j | x^{(i)};𝜙,𝜇,𝛴) $ 라는 식으로 쓰여지고 파라미터로 𝜙,𝜇,𝛴 를 사용하게 됩니다.
 
 𝜙는 집단의 비율입니다. 여자와 남자의 성비가 4:6이라면 [0.4, 0.6]을 갖죠. 스텝을 거쳐 업데이트 될 것이므로 초기에는 [0.5, 0.5]로 시작하겠습니다.
 
@@ -172,17 +174,17 @@ $\omega^{(i)}_j = p(z^{(i)} = j | x^{(i)};𝜙,𝜇,𝛴)$ 라는 식으로 쓰�
 
 만약 i번째 데이터가 256mm라고 합시다. 그렇다면 이 데이터가 여자 혹은 남자집단에 속할 확률 $\omega^{(i)}_여, \omega^{(i)}_남$ 을 합하면 1인 각각의 확률값이 됩니다. 
 
-$$\omega^{(i)}_여 = p(z^{(i)} = 여 | x^{(i)}=256)$$
+$\omega^{(i)}_여 = p(z^{(i)} = 여 | x^{(i)}=256)$
 
-$$\omega^{(i)}_남 = p(z^{(i)} = 남 | x^{(i)}=256)$$
+$\omega^{(i)}_남 = p(z^{(i)} = 남 | x^{(i)}=256)$
 
 그리고 당연히 두 확률의 합은 1이죠.
 
 좀 더 정확한 확률을 구하기 위해 베이즈 정리를 사용하면
 
-$$p(z^{(i)} = j | x^{(i)};\phi,\mu,\Sigma)  = \frac {p(x^{(i)}|z^{(i)} = j ; \mu,\sigma)p(z^{(i)} = j; \phi)}{p(x^{(i)};\phi,\mu,\Sigma)}$$
+$p(z^{(i)} = j | x^{(i)};\phi,\mu,\Sigma)  = \frac {p(x^{(i)}|z^{(i)} = j ; \mu,\sigma)p(z^{(i)} = j; \phi)}{p(x^{(i)};\phi,\mu,\Sigma)}$
 
-$$=\frac {p(x^{(i)}|z^{(i)} = j ; \mu,\Sigma)p(z^{(i)} = j; \phi)}{\sum^l_{k=1} p(x^{(i)}|z^{(i)} = k ; \mu,\Sigma) p(z^{(i)} = k ; \phi)}$$
+$=\frac {p(x^{(i)}|z^{(i)} = j ; \mu,\Sigma)p(z^{(i)} = j; \phi)}{\sum^l_{k=1} p(x^{(i)}|z^{(i)} = k ; \mu,\Sigma) p(z^{(i)} = k ; \phi)}$$
 
 
 
@@ -283,7 +285,7 @@ for aa in range(epoch):
 
 ## 결과적으로..
 
-<img src = "https://drive.google.com/uc?id=1Xk4LK5TpC1mGt_G1iEnIehUrX1HWFOz-" height = 300 width = 480>
+![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian%20mm.md/footsize.gif)
 
 구분이 잘 되는 집단이라 그런지 3회정도 반복하니까 거의 정확하게 맞았습니다.
 
