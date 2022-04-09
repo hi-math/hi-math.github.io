@@ -251,7 +251,13 @@ import matplotlib.pyplot as plt
 from scipy.stats import norm
 import matplotlib.animation as animation
 
-epoch=10
+epoch=30
+
+def pdf_x(i,x):
+  return norm(mu[i],std[i]).pdf(x)*phi[i]
+
+def bp(i, data):
+  return pdf_x(i,data) / (pdf_x(0,data)+pdf_x(1,data))
 
 for aa in range(epoch):
 
@@ -270,6 +276,10 @@ for aa in range(epoch):
   plt.title(ep)
 
   plt.legend((label1, label2), loc='upper right')
+  
+  #파일을 저장하기 위한 코드이므로 실행하려면 경로를 다시 지정하세요.
+  #plt.savefig('/content/drive/MyDrive/Colab Notebooks/기계학습/과제/gif/gif{}.png'.format(aa))
+
   plt.show()
 
 
@@ -278,7 +288,7 @@ for aa in range(epoch):
   data1_tmp, data2_tmp=[], []
   normal1 = np.array(norm(mu[0],std[0]).pdf(data))
   normal2 = np.array(norm(mu[1],std[1]).pdf(data))
-
+ 
   p_w1 = (normal1*phi[0])/(normal1*phi[0] + normal2*phi[1])
   p_w2 = (normal2*phi[1])/(normal1*phi[0] + normal2*phi[1])
 
@@ -293,9 +303,12 @@ for aa in range(epoch):
   data2 = np.array(data2_tmp)
 
 #m-step
-  mu=[data1.mean(),data2.mean()]
-  std=[data1.std(),data2.std()]
-  phi=[len(data1)/(len(data1)+len(data2)),len(data2)/(len(data1)+len(data2)) ]
+  mu=[ (bp(0,data)*data).sum()/bp(0,data).sum(), (bp(1,data)*data).sum()/bp(1,data).sum() ]
+
+  std=[((bp(0,data)*((data-mu[0])**2)).sum()/bp(0,data).sum())**0.5, 
+       ((bp(1,data)*((data-mu[1])**2)).sum()/bp(1,data).sum())**0.5 ]
+
+  phi=[bp(0,data).mean(), bp(1,data).mean()] 
 ```
 
 ## 결과적으로..
@@ -304,3 +317,6 @@ for aa in range(epoch):
 
 평균은 240.31, 269.65로 거의 비슷했습니다.
 표준편차도 6.90과 6.13으로 거의 비슷해짐을 알 수 있었습니다.
+웨이트는 각각 0.699와 0.301로 계산되었습니다.
+
+신기하게 잘 맞추네요!!
