@@ -216,7 +216,7 @@ data.sort()
 
 data1,data2 =[],[]
 for i in data:
-  if np.random.rand()>0.5 :
+  if i>data.mean() :
     data1.append(i)
   else:
     data2.append(i)
@@ -224,11 +224,25 @@ for i in data:
 data1 = np.array(data1)
 data2 = np.array(data2)
 
-mu=[210,290]
-std=[12,15]
+
+mu=[210,280]
+std=[12,14]
 phi=[0.5,0.5]
 ```
 
+초기조건을 원래는 아래처럼 주면 작업을 빠르게 마칠 수 있습니다. 
+
+전체의 평균을 기준으로 data1과 data2로 나누었고 각 평균과 표준편차, 개수를 구하여 초기조건을 주는 것이죠.
+
+하지면 이 프로젝트에서는 극적인 효과를 위해 평균과 표준편차를 임의로 부여하겠습니다.
+
+
+
+'''python
+mu=[data1.mean(),data2.mean()]
+std=[data1.std(),data2.std()]
+phi=[len(data1)/len(data),len(data2)/len(data)]
+```
 
 
 ```python
@@ -288,8 +302,5 @@ for aa in range(epoch):
 
 ![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian%20mm.md/footsize.gif)
 
-구분이 잘 되는 집단이라 그런지 3회정도 반복하니까 거의 정확하게 맞았습니다.
-
-음 생각해보니 이정도 라벨링은 그림보면 바로 할 수 있는게 아닐까요?!
-
-내일은 좀 더 실용적인 예를 찾아봐야겠습니다.
+평균은 240.31, 269.65로 거의 비슷했습니다.
+표준편차도 6.90과 6.13으로 거의 비슷해짐을 알 수 있었습니다.
