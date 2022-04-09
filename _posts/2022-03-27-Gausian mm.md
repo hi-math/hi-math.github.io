@@ -238,7 +238,7 @@ phi=[0.5,0.5]
 
 
 
-'''python
+```python
 mu=[data1.mean(),data2.mean()]
 std=[data1.std(),data2.std()]
 phi=[len(data1)/len(data),len(data2)/len(data)]
@@ -316,7 +316,11 @@ for aa in range(epoch):
 ![png](https://raw.githubusercontent.com/hi-math/hi-math.github.io/master/images/2022-03-27-Gausian%20mm.md/footsize.gif)
 
 평균은 240.31, 269.65로 거의 비슷했습니다.
+
+
 표준편차도 6.90과 6.13으로 거의 비슷해짐을 알 수 있었습니다.
+
+
 웨이트는 각각 0.699와 0.301로 계산되었습니다.
 
 신기하게 잘 맞추네요!!
